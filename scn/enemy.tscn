@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://8wh6j3007yq"]
+
+[ext_resource type="Script" path="res://scn/enemy.gd" id="1_cq31e"]
+[ext_resource type="Texture2D" uid="uid://2lm1e1qx5c5f" path="res://sprites/1enemy.png" id="1_vkcyl"]
+
+[node name="enemy" type="Node2D"]
+script = ExtResource("1_cq31e")
+
+[node name="enemy" type="Sprite2D" parent="."]
+position = Vector2(562, 332)
+texture = ExtResource("1_vkcyl")
+
+[node name="HP" type="Label" parent="."]
+offset_left = 479.0
+offset_top = 34.0
+offset_right = 652.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(0.92549, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hit" type="Button" parent="."]
+offset_left = 468.0
+offset_top = 144.0
+offset_right = 657.0
+offset_bottom = 527.0
+flat = true
+
+[connection signal="button_up" from="hit" to="." method="_on_hit_button_up"]
