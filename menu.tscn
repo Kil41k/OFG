@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://fjhha7sjwv4r"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_hrpt0"]
+[ext_resource type="PackedScene" uid="uid://15mit1r0u1ai" path="res://parallax_background.tscn" id="2_apddx"]
+
+[sub_resource type="FontFile" id="FontFile_4nbq6"]
+cache/0/90/0/ascent = 0.0
+cache/0/90/0/descent = 0.0
+cache/0/90/0/underline_position = 0.0
+cache/0/90/0/underline_thickness = 0.0
+cache/0/90/0/scale = 1.0
+cache/0/90/0/kerning_overrides/90/0 = Vector2(0, 0)
+cache/0/90/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/90/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_hrpt0")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 319.0
+offset_top = 269.0
+offset_right = 778.0
+offset_bottom = 401.0
+theme_override_colors/font_color = Color(0, 0.713726, 0.266667, 1)
+theme_override_fonts/font = SubResource("FontFile_4nbq6")
+theme_override_font_sizes/font_size = 90
+text = "Play"
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 321.0
+offset_top = 432.0
+offset_right = 779.0
+offset_bottom = 564.0
+theme_override_colors/font_color = Color(0.992157, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 112.0
+offset_top = 68.0
+offset_right = 955.0
+offset_bottom = 240.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Do you want to kill Monsters
+click Play"
+horizontal_alignment = 1
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_apddx")]
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
