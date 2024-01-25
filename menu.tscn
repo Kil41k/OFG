@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://15mit1r0u1ai" path="res://parallax_background.tscn" id="2_apddx"]
 
 [sub_resource type="FontFile" id="FontFile_4nbq6"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/90/0/ascent = 0.0
 cache/0/90/0/descent = 0.0
 cache/0/90/0/underline_position = 0.0
